@@ -269,6 +269,78 @@ address{
     line-height: 1.5;
 }
 
+#faq {
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+}
+
+.faq-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.faq-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.faq-pregunta {
+    width: 100%;
+    background: white;
+    border: none;
+    padding: 16px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #1a3a8f;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.faq-pregunta:hover {
+    background: #f0f8ff;
+}
+
+.faq-icono {
+    font-size: 1.4em;
+    font-weight: 300;
+    color: #48c6c8;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+}
+
+.faq-respuesta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 20px;
+}
+
+.faq-respuesta p {
+    margin: 0;
+    padding: 12px 0;
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
+
+.faq-item.abierto .faq-respuesta {
+    max-height: 200px;
+    padding: 0 20px;
+}
+
+.faq-item.abierto .faq-icono {
+    transform: rotate(45deg);
+}
+
 /* ===== MEDIA QUERIES — TABLET ===== */
 @media (min-width: 601px) and (max-width: 900px) {
     .card {
